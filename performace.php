@@ -22,6 +22,13 @@
                 <li>PHP7 has less memory accesses (less indirections)</li>
                 <li>PHP7 simple data are copied</li>
                 <li>PHP7 complex data are shared (Copy on Write)</li>
+                <li>PHP7 +- 50% less memory use</li>
+                <li>
+                    PHP7 2-3 time fater that PHP 5,
+                    <a target="_blank" href="http://www.zend.com/en/resources/php7_infographic">
+                        benchmarks
+                    </a>
+                </li>
             </ul>
             <h3>Memory Optimisations</h3>
             <table class="table">
