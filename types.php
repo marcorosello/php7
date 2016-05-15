@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+//todo move to slides
 /**
 * PHP is still a loosely typed language and does coarsing (casting) by default.
 * The features have been extended with full type hinting and return type hinting.
@@ -13,35 +14,48 @@ declare(strict_types=1);
  * Int can be considered a float but not viceversa
 */
 // var_dump(sumFloats(1, 2));
-function sumFloats(float $first, float $second) : float
-{
-    return (int) $first + $second;
-}
-
-/**
- * Not allow to pass a float instead of a int
- */
-// var_dump(sumIntegers(1, 2));
-function sumIntegers(int $first, int $second) : int
+function sumFloats(float $first, float $second)
 {
     return $first + $second;
 }
 
 /**
- * It needs to be a string nothing else is accepted
+ * Not allow to pass a float instead of a int
  */
-// var_dump(returnString("123"));
-function returnString(string $hello) : string
+// var_dump(sumIntegers(1.0, 2));
+function sumIntegers(int $first, int $second)
 {
-    // return $hello;
-    return (int) $hello;
+    return $first + $second;
 }
 
 /**
  * integer 1 is not considered bool, it would need casting.
 */
-// var_dump(isTrue(1));
+// var_dump(isTrue(true));
 function isTrue(bool $return) : bool
 {
     return $return;
+}
+
+
+/**
+ * Avoidable issue
+ * 
+ */
+
+// service
+$customer = $this->autService->getCustomer;
+$model->getVoucher($customer);
+
+
+
+// model
+/**
+* @param int $customerId customer id
+*/
+function getVoucher($customerId)
+{
+    //query db
+    //where customerId == $customerId
+
 }

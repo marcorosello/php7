@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * ERRORS AND EXCEPTIONS
  * Do extend from Throwable interface which allows to be caught
@@ -9,17 +10,24 @@
  * http://php.net/manual/en/class.throwable.php
 */
 
+
 /*
  * The error exception will only be thrown if it is within a try catch, otherwise it will throw a fatal error.
 */
 function sumFloats(float $first, float $second) : float
 {
-    // throw new Exception("Error Processing Request");
+    throw new Exception("Error Processing Request");
     return $first + $second;
 }
 
+
+
+print sumFloats('1', 2);
+
+
+
 try {
-    sumFloats(1, 2);
+    print sumFloats(1, 2);
 }
 catch(Exception $exception) {
     var_dump('This is an exception');
