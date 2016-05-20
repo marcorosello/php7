@@ -1,6 +1,6 @@
 <?php
 /*
-* There is a rfc to allow nullable return option
+* There is rfc to allow nullable return option, it is already accepted
 * https://wiki.php.net/rfc/nullable_types
 */
 //nuable return in php 7.1
@@ -17,9 +17,10 @@ function say(?string $msg) {
 
 /**
  * Void return types
+ * RFC already implemented
  * https://wiki.php.net/rfc/void_return_type
  *
-*/
+ */
 function lacks_return(): void {
    // valid
 }
