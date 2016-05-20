@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-//todo move to slides
+
 /**
 * PHP is still a loosely typed language and does coarsing (casting) by default.
 * The features have been extended with full type hinting and return type hinting.
@@ -13,7 +13,7 @@ declare(strict_types=1);
 /**
  * Int can be considered a float but not viceversa
 */
-// var_dump(sumFloats(1, 2));
+var_dump(sumFloats(1, 2));
 function sumFloats(float $first, float $second)
 {
     return $first + $second;
@@ -37,14 +37,18 @@ function isTrue(bool $return) : bool
     return $return;
 }
 
+die();
+
+
+
 
 /**
  * Avoidable issue
- * 
+ *
  */
 
 // service
-$customer = $this->autService->getCustomer;
+$customer = $this->authService->getCustomer;
 $model->getVoucher($customer);
 
 

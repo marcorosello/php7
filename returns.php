@@ -17,33 +17,7 @@ function returnString(string $hello) : string
  * New paradigm about returning values, is we would need to throw new exceptions if we do not find a specific values
  * for example if a function return a User and you check in the database that specific user and it is not there
  * you can't return null, that may change in future version, but not clear yet.
- * There is a propose to allow nullable return option
- * https://wiki.php.net/rfc/nullable_types
  */
-//nuable return in php 7.1
- function answer(): ?int  {
-     return null; //ok
- }
-
- function say(?string $msg) {
-     if ($msg) {
-         echo $msg;
-     }
- }
-
-/**
-  * Void return types
-  * https://wiki.php.net/rfc/void_return_type
-  *
-*/
-function lacks_return(): void {
-    // valid
-}
-
-function lacks_return(): void {
-    // invalid
-    return true;
-}
 
 class UserNotFoundException extends \Exception {}
 
