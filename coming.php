@@ -1,4 +1,24 @@
 <?php
+declare(strict_types=0);
+
+/**
+ * Void return types
+ * RFC already implemented
+ * https://wiki.php.net/rfc/void_return_type
+ *
+ */
+function lacksReturn() : void {
+   // valid
+}
+
+function lacksReturn() : void {
+   // invalid
+   return true;
+}
+
+
+
+
 /*
 * There is rfc to allow nullable return option, it is already accepted
 * https://wiki.php.net/rfc/nullable_types
@@ -15,20 +35,6 @@ function say(?string $msg) {
     }
 }
 
-/**
- * Void return types
- * RFC already implemented
- * https://wiki.php.net/rfc/void_return_type
- *
- */
-function lacks_return(): void {
-   // valid
-}
-
-function lacks_return(): void {
-   // invalid
-   return true;
-}
 
 
 /**
@@ -43,4 +49,5 @@ class Product
     private Currency $currency;
     private bool $active;
     private int $stock;
+    private void $void; //nonsense
 }
